@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Comic Relief", system-ui;
+}
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  gap: 2rem;
+}
+
+input {
+  padding: 0.75rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #1e1e1e;
+  color: white;
+  width: 200px;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  background-color: #03dac6;
+  border: none;
+  border-radius: 8px;
+  color: #121212;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover:enabled {
+  background-color: #02c2b3;
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.count {
+  font-size: 10rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #03dac6;
+}
+
+#stopBtn {
+  background-color: #e04965; /* soft red */
+  color: white;
+}
+
+#stopBtn:hover:enabled {
+  background-color: #b04159; /* darker red on hover */
+}

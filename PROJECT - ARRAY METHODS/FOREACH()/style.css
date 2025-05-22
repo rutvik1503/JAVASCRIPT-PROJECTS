@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  #heroSection {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  #heroSection h1 {
+    font-size: 38px;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 1.8px;
+    font-family: "Comic Relief", cursive;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  #heroSection .box {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+  }
+  
+  #heroSection .box input {
+    flex: 1;
+    height: 50px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.12);
+    outline: none;
+    transition: 0.3s ease;
+  }
+  
+  #heroSection .box input::placeholder {
+    color: rgba(76, 74, 74, 0.6);
+  }
+  
+  #heroSection .box input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  #heroSection .box button {
+    width: 130px;
+    height: 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 12px;
+    background: linear-gradient(to right, #6a82fb, #a777e3);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  #heroSection .box button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #8360c3, #2ebf91);
+  }
+  
+  #heroSection p {
+    color: #eaeaea;
+    font-size: 18px;
+    letter-spacing: 0.6px;
+    text-align: center;
+  }
+  
+  #heroSection #showAndDeleteTask {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  #heroSection #showAndDeleteTask ul {
+    width: 100%;
+    list-style: none;
+  }
+  
+  #heroSection #showAndDeleteTask ul li {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+  }
+  
+  #heroSection #showAndDeleteTask ul li:hover {
+    transform: scale(1.015);
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  #heroSection #showAndDeleteTask ul button {
+    background-color: #ff4e4e;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  #heroSection #showAndDeleteTask ul button:hover {
+    background-color: #ff6b6b;
+  }
+  

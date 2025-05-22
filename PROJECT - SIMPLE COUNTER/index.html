@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Professional Dark Theme Counter</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #E0E0E0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 1rem;
+    }
+
+    .counter-container {
+      background-color: #1F1F1F;
+      padding: 2.5rem 3rem;
+      border-radius: 12px;
+      box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.7),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      width: 280px;
+      text-align: center;
+      user-select: none;
+    }
+
+    .counter-display {
+      font-weight: 700;
+      font-size: 9rem;  /* Bigger size */
+      margin-bottom: 2rem;
+      color: #03A9F4;
+      letter-spacing: 0.02em;
+      text-shadow:
+        0 2px 6px rgba(3, 169, 244, 0.5);
+    }
+
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    button {
+      flex: 1;
+      padding: 0.75rem 0;
+      font-size: 1.15rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #fff;
+      background: linear-gradient(135deg, #2196F3 0%, #1769AA 100%);
+      box-shadow: 0 3px 8px rgba(33, 150, 243, 0.5);
+      transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
+      user-select: none;
+    }
+
+    button:hover,
+    button:focus-visible {
+      background: linear-gradient(135deg, #1769AA 0%, #2196F3 100%);
+      box-shadow: 0 5px 15px rgba(33, 150, 243, 0.7);
+      outline: none;
+      transform: translateY(-2px);
+    }
+
+    button:active {
+      transform: translateY(1px);
+      box-shadow: 0 2px 7px rgba(33, 150, 243, 0.4);
+    }
+
+    .reset-btn {
+      background: linear-gradient(135deg, #F44336 0%, #AA2E25 100%);
+      box-shadow: 0 3px 8px rgba(244, 67, 54, 0.5);
+    }
+
+    .reset-btn:hover,
+    .reset-btn:focus-visible {
+      background: linear-gradient(135deg, #AA2E25 0%, #F44336 100%);
+      box-shadow: 0 5px 15px rgba(244, 67, 54, 0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="counter-container" role="main" aria-label="Dark theme counter">
+    <div class="counter-display" id="counter" aria-live="polite" aria-atomic="true">0</div>
+    <div class="button-group">
+      <button aria-label="Decrement counter" onclick="decrement()">−</button>
+      <button class="reset-btn" aria-label="Reset counter" onclick="resetCounter()">Reset</button>
+      <button aria-label="Increment counter" onclick="increment()">+</button>
+    </div>
+  </main>
+
+  <script>
+    let count = 0;
+    const counter = document.getElementById("counter");
+
+    function updateCounter() {
+      counter.textContent = count;
+    }
+
+    function increment() {
+      count++;
+      updateCounter();
+    }
+
+    function decrement() {
+      count--;
+      updateCounter();
+    }
+
+    function resetCounter() {
+      count = 0;
+      updateCounter();
+    }
+  </script>
+
+</body>
+</html>

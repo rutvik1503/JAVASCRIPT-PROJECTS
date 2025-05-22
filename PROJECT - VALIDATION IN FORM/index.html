@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Dark Registration Form</title>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- jQuery Validate -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #eee;
+    }
+
+    form {
+      background-color: #222;
+      padding: 30px 25px;
+      border-radius: 8px;
+      width: 320px;
+      box-sizing: border-box;
+      box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-weight: normal;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      border: 1px solid #555;
+      background-color: #333;
+      color: #eee;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    input::placeholder {
+      color: #777;
+    }
+
+    input:focus {
+      border-color: #66fcf1;
+      outline: none;
+    }
+
+    .error {
+      color: #ff6b6b;
+      font-size: 12px;
+      margin-top: -16px;
+      margin-bottom: 16px;
+      display: block;
+      min-height: 18px; /* reserve space */
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      background-color: #66fcf1;
+      color: #121212;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45e2d1;
+    }
+
+    button:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="myForm" novalidate>
+    <h2>Register</h2>
+
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Rutvik Bhatti" />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="email@example.com" />
+
+    <label for="number">Contact No.</label>
+    <input type="number" id="number" name="number" placeholder="9988776655" />
+
+    <label for="pass">Password</label>
+    <input type="password" id="pass" name="pass" placeholder="********" />
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    $(function () {
+      $("#myForm").validate({
+        rules: {
+          name: {
+            required: true,
+            minlength: 5,
+            maxlength: 55,
+          },
+          email: {
+            required: true,
+            email: true,
+          },
+          number: {
+            required: true,
+            digits: true,
+          },
+          pass: {
+            required: true,
+            minlength: 8,
+          },
+        },
+        messages: {
+          name: {
+            required: "Name is required!",
+            minlength: "At least 5 characters.",
+            maxlength: "Max 55 characters allowed.",
+          },
+          email: {
+            required: "Email is required!",
+            email: "Enter a valid email.",
+          },
+          number: {
+            required: "Contact number is required!",
+            digits: "Only digits allowed.",
+          },
+          pass: {
+            required: "Password is required!",
+            minlength: "Minimum 8 characters.",
+          },
+        },
+        errorPlacement: function(error, element) {
+          error.insertAfter(element);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
