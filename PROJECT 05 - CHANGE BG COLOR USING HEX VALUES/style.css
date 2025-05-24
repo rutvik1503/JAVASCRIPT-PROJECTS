@@ -1,0 +1,53 @@
+/* Reset margin and padding for all elements, set box-sizing to border-box, and apply font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Relief", system-ui;
+}
+
+/* Prevent page scrollbars */
+body {
+  overflow: hidden;
+}
+
+/* Style for the main container (#heroSection) */
+#heroSection {
+  width: 100%; /* Full width */
+  height: 100vh; /* Full viewport height */
+  padding: 50px; /* Inner spacing */
+  background-color: black; /* Base background color */
+  background: linear-gradient(
+    135deg,
+    #000000,
+    #1c1c1c
+  ); /* Gradient background */
+  display: flex; /* Flex container */
+  justify-content: center; /* Center content horizontally */
+  align-items: end; /* Align content to bottom vertically */
+  transition: background 0.5s ease-in-out; /* Smooth background changes */
+}
+
+/* Style for the button inside #heroSection */
+#heroSection button {
+  padding: 16px 30px; /* Inner padding */
+  border: none; /* Remove default border */
+  font-size: 18px; /* Font size */
+  font-weight: bold; /* Bold text */
+  color: white; /* White text color */
+  border-radius: 15px; /* Rounded corners */
+  backdrop-filter: blur(10px); /* Blur effect behind button */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  /* border: 1px solid rgba(255, 255, 255, 0.2); */ /* Optional border, currently commented out */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: transform 0.3s ease, background 0.4s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  letter-spacing: 1px; /* Spacing between letters */
+}
+
+/* Button hover state styles */
+#heroSection button:hover {
+  transform: scale(1.08); /* Slightly enlarge button */
+  background: rgba(255, 255, 255, 0.2); /* Darker semi-transparent background */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Stronger shadow for emphasis */
+}

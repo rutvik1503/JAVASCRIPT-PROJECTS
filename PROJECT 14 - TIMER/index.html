@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadata for character encoding and responsive layout -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title -->
+    <title>Dark Timer</title>
+
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Preconnecting to Google Fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts: Ubuntu family -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Main container for the timer UI -->
+    <div class="container">
+      <!-- Display area for the timer -->
+      <div class="show">
+        <h1 id="showTimer">00:00:00:00</h1>
+      </div>
+
+      <!-- Input field to set timer in minutes -->
+      <input type="text" placeholder="Enter time in minutes" id="input" />
+
+      <!-- Control buttons for starting and pausing the timer -->
+      <div class="buttons">
+        <button onclick="timer()" id="startBtn">Start Timer</button>
+        <button onclick="pause()" id="pauseBtn">Pause</button>
+      </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

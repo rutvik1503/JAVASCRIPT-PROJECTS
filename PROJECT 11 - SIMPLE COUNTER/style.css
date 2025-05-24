@@ -1,0 +1,109 @@
+/* Apply border-box sizing to all elements and their pseudo-elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Style the body with dark background, centered flex layout, and padding */
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color for contrast */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  padding: 1rem; /* Inner spacing */
+}
+
+/* Main container for the counter */
+.counter-container {
+  background-color: #1f1f1f; /* Slightly lighter dark background */
+  padding: 2.5rem 3rem; /* Spacious padding */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7),
+    /* Soft outer shadow */ inset 0 1px 0 rgba(255, 255, 255, 0.05); /* Subtle inner highlight */
+  width: 280px; /* Fixed width */
+  text-align: center; /* Center text inside */
+  user-select: none; /* Prevent text selection */
+}
+
+/* Display area for the counter number */
+.counter-display {
+  font-weight: 700; /* Bold text */
+  font-size: 9rem; /* Very large font size */
+  margin-bottom: 2rem; /* Space below the number */
+  color: #03a9f4; /* Bright blue color */
+  letter-spacing: 0.02em; /* Slight spacing between letters */
+  text-shadow: 0 2px 6px rgba(3, 169, 244, 0.5); /* Glowing shadow effect */
+}
+
+/* Container for the buttons */
+.button-group {
+  display: flex; /* Flex layout to align buttons */
+  gap: 1rem; /* Space between buttons */
+  justify-content: center; /* Center buttons horizontally */
+}
+
+/* Style all buttons */
+button {
+  flex: 1; /* Buttons share equal width */
+  padding: 0.75rem 0; /* Vertical padding */
+  font-size: 1.15rem; /* Slightly larger text */
+  font-weight: 600; /* Semi-bold text */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  color: #fff; /* White text */
+  background: linear-gradient(
+    135deg,
+    #2196f3 0%,
+    #1769aa 100%
+  ); /* Blue gradient background */
+  box-shadow: 0 3px 8px rgba(33, 150, 243, 0.5); /* Soft blue shadow */
+  transition: background-color 0.25s ease, box-shadow 0.25s ease,
+    transform 0.15s ease; /* Smooth hover transitions */
+  user-select: none; /* Prevent text selection */
+}
+
+/* Hover and focus-visible states for buttons */
+button:hover,
+button:focus-visible {
+  background: linear-gradient(
+    135deg,
+    #1769aa 0%,
+    #2196f3 100%
+  ); /* Reverse gradient */
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.7); /* Stronger shadow */
+  outline: none; /* Remove default focus outline */
+  transform: translateY(-2px); /* Slightly lift button */
+}
+
+/* Active (pressed) state for buttons */
+button:active {
+  transform: translateY(1px); /* Push button down */
+  box-shadow: 0 2px 7px rgba(33, 150, 243, 0.4); /* Reduced shadow */
+}
+
+/* Specific styles for the Reset button */
+.reset-btn {
+  background: linear-gradient(
+    135deg,
+    #f44336 0%,
+    #aa2e25 100%
+  ); /* Red gradient background */
+  box-shadow: 0 3px 8px rgba(244, 67, 54, 0.5); /* Soft red shadow */
+}
+
+/* Hover and focus-visible states for Reset button */
+.reset-btn:hover,
+.reset-btn:focus-visible {
+  background: linear-gradient(
+    135deg,
+    #aa2e25 0%,
+    #f44336 100%
+  ); /* Reverse red gradient */
+  box-shadow: 0 5px 15px rgba(244, 67, 54, 0.7); /* Stronger red shadow */
+}

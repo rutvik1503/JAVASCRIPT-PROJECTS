@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARRAY METHOD - FOREACH</title>
+
+    <!-- Link external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link external CSS stylesheet -->
+
+    <!-- Preconnect to Google Fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Link to Google Fonts: Comic Relief & Outfit -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link to Google Fonts: Comic Relief & Outfit -->
+  </head>
+  <body>
+    <div id="heroSection">
+      <!-- Main heading for the To Do List app -->
+      <h1>TO DO LIST</h1>
+
+      <!-- Container for adding new tasks -->
+      <div class="box">
+        <!-- Input field to enter new task -->
+        <input type="text" id="enterTask" placeholder="Enter task..." />
+        <!-- Button to submit the new task, triggers submitTask() function -->
+        <button onclick="submitTask()">Submit Task</button>
+      </div>
+      <!-- Container for adding new tasks -->
+
+      <!-- Container to display and manage the list of tasks -->
+      <div id="showAndDeleteTask">
+        <!-- Unordered list where tasks will be added dynamically -->
+        <ul id="taskList"></ul>
+      </div>
+      <!-- Container to display and manage the list of tasks -->
+    </div>
+
+    <!-- Link external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

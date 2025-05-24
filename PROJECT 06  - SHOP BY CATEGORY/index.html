@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Shopping Center</title>
+
+    <!-- Set webpage icon (favicon) -->
+    <link rel="icon" href="/BACKGROUND COLOR CHANGER/Logo.png" />
+
+    <!-- Link external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Preconnect to Google Fonts for performance optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Import custom font from Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Main hero section of the webpage -->
+    <div id="heroSection">
+      <!-- Main heading for the shopping center -->
+      <h1>Online Shopping Center</h1>
+
+      <!-- Dropdown menu to filter products by category -->
+      <select name="productCategory" id="options">
+        <option value="all">All</option>
+        <option value="shoes">Shoes</option>
+        <option value="men clothes">Men Clothes</option>
+        <option value="women clothes">Women Clothes</option>
+        <option value="kids clothes">Kids Clothes</option>
+        <option value="sport">Sports</option>
+        <option value="accessories">Accessories</option>
+      </select>
+
+      <!-- Container where products will be dynamically displayed -->
+      <div id="container"></div>
+    </div>
+
+    <!-- Link external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

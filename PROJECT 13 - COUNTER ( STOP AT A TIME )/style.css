@@ -1,0 +1,32 @@
+/* Reset default margins and paddings, set box-sizing to border-box for consistent sizing,
+   set background color to black, and apply a default sans-serif font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Style for the main container */
+.main {
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center child elements horizontally */
+  align-items: center; /* Center child elements vertically */
+  gap: 75px; /* Space between each box */
+}
+
+/* Style for each box inside the main container */
+.main .box {
+  height: 300px; /* Fixed height */
+  width: 300px; /* Fixed width */
+  /* border: 1px solid white; */ /* Optional border for debugging (currently commented out) */
+  font-size: 60px; /* Large font size for counter numbers */
+  color: white; /* Text color */
+  display: flex; /* Use flexbox for inner alignment */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  font-weight: 600; /* Bold font */
+}

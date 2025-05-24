@@ -1,0 +1,53 @@
+/* Reset default margin and padding, use border-box sizing, set font family */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Relief", system-ui;
+}
+
+/* Prevent scrollbars on the body */
+body {
+  overflow: hidden;
+}
+
+/* Style for the main container (#heroSection) */
+#heroSection {
+  width: 100%; /* Full width */
+  height: 100vh; /* Full viewport height */
+  padding: 50px; /* Inner spacing */
+  background-color: black; /* Fallback background color */
+  background: linear-gradient(
+    135deg,
+    #000000,
+    #1c1c1c
+  ); /* Gradient background */
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center horizontally */
+  align-items: end; /* Align children to the bottom */
+  transition: background 0.5s ease-in-out; /* Smooth transition on background change */
+}
+
+/* Style for the button inside #heroSection */
+#heroSection button {
+  padding: 16px 30px; /* Padding inside button */
+  border: none; /* Remove default border */
+  font-size: 18px; /* Button text size */
+  font-weight: bold; /* Bold text */
+  color: white; /* White text color */
+  border-radius: 15px; /* Rounded corners */
+  backdrop-filter: blur(10px); /* Blur effect behind the button */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  /* border: 1px solid rgba(255, 255, 255, 0.2); */ /* Optional border, commented out */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  transition: transform 0.3s ease, background 0.4s ease, box-shadow 0.3s ease; /* Smooth transitions for transform, background, and shadow */
+  letter-spacing: 1px; /* Spacing between letters */
+}
+
+/* Hover effect for the button */
+#heroSection button:hover {
+  transform: scale(1.08); /* Slightly enlarge button */
+  background: rgba(255, 255, 255, 0.2); /* Make background a bit more opaque */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+}

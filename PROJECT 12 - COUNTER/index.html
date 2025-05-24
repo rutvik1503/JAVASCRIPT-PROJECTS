@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic meta tags for character encoding and responsive layout -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Up Counter with Interval</title>
+
+    <!-- Google Fonts: Comic Relief and Poppins for styling -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Display element for the counter -->
+    <div class="count" id="counter">0</div>
+
+    <!-- Input field to enter the target number -->
+    <input type="text" id="input" placeholder="Enter a number" />
+
+    <!-- Input field to enter interval time in milliseconds -->
+    <input
+      type="text"
+      id="intervalInput"
+      placeholder="Enter interval in ms"
+      min="10"
+    />
+
+    <!-- Buttons to control the counter -->
+    <div class="buttons">
+      <!-- Start button triggers the startCounting() function -->
+      <button onclick="startCounting()" id="startBtn">Start Count</button>
+
+      <!-- Stop button triggers the stopCounting() function; disabled by default -->
+      <button onclick="stopCounting()" id="stopBtn" disabled>
+        Stop Counting
+      </button>
+    </div>
+
+    <!-- External JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

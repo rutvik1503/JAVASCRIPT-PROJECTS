@@ -1,0 +1,107 @@
+/* Reset default margin and padding, use border-box sizing for all elements */
+/* Set the base font-family to "Comic Relief" with system-ui fallback */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Relief", system-ui;
+}
+
+/* Body styles */
+/* Apply a stylish dark gradient background */
+/* Set text color to white and minimum height to fill the viewport */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  min-height: 100vh;
+}
+
+/* Main container holding all product cards */
+/* Full width, flex layout with wrapping enabled */
+/* Gap between flex items is 30px */
+/* Padding inside container for spacing */
+/* Center items horizontally */
+#heroSection {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 30px;
+  justify-content: center;
+}
+
+/* Individual product card container */
+/* Width is 22% of the parent but not less than 260px */
+/* Fixed height of 460px */
+/* Semi-transparent white background with blur for frosted glass effect */
+/* Rounded corners with 16px radius */
+/* Padding inside the container */
+/* Subtle box shadow for depth */
+/* Flexbox column layout with spacing between child elements */
+/* Smooth transition effects on transform and box-shadow */
+/* Thin semi-transparent border */
+.container {
+  width: 22%;
+  min-width: 270px;
+  height: 470px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Hover effect on the product card */
+/* Slightly lift the card upwards */
+/* Intensify the blue glow box shadow */
+.container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 255, 0.4);
+}
+
+/* Styles for the product image inside the container */
+/* Full width of the container and fixed height */
+/* Object-fit to cover ensures the image covers the area without distortion */
+/* Rounded corners to match container */
+/* Smooth transition for scaling on hover */
+/* Thin semi-transparent border */
+.container img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Scale up the image slightly on container hover for a subtle zoom effect */
+.container:hover img {
+  transform: scale(1.03);
+}
+
+/* Product name styling */
+/* Medium font size with letter spacing for readability */
+/* White color and bold font weight */
+.container h1 {
+  font-size: 18px;
+  letter-spacing: 1.2px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Styling for product description and price */
+/* Smaller font size and lighter color for less emphasis */
+/* Slight letter spacing */
+/* Normal font weight */
+.container p,
+.container h3 {
+  font-size: 14.5px;
+  letter-spacing: 0.8px;
+  color: #dcdcdc;
+  font-weight: 400;
+}

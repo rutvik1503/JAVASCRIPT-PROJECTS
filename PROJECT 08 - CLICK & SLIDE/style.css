@@ -1,0 +1,54 @@
+/* Reset padding, margin and set box-sizing for all elements */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Set a gradient background for the whole body */
+body {
+  background: linear-gradient(135deg, #000000, #434343);
+}
+
+/* Main container setup with flexbox to center items and spacing */
+.main {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: space-evenly; /* Even spacing between buttons and image */
+  align-items: center; /* Vertically center items */
+  padding: 75px;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out; /* Smooth background transition */
+}
+
+/* Image container styling */
+.main .image {
+  width: 80%;
+  height: 90%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px; /* Rounded corners */
+}
+
+/* Styling for the navigation buttons */
+.main button {
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0); /* Transparent background */
+  backdrop-filter: blur(5px); /* Blur effect behind the button */
+  padding: 15px 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Button hover effect */
+.main button:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+}

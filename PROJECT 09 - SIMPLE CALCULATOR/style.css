@@ -1,0 +1,101 @@
+/* Apply box-sizing to all elements for consistent sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body with a dark background and center contents */
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #121212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Style the calculator container */
+.calculator {
+  background-color: #1e1e1e;
+  border-radius: 16px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* subtle outer shadow */
+}
+
+/* Style the display input */
+#result {
+  width: 100%;
+  height: 60px;
+  background-color: #2b2b2b;
+  color: #fff;
+  font-size: 2rem;
+  text-align: right;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* Remove the outline when the input is focused */
+#result:focus {
+  outline: none;
+}
+
+/* Layout the buttons in a 4-column grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px; /* space between buttons */
+}
+
+/* Style for all buttons */
+.buttons button {
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  background-color: #333;
+  color: #f0f0f0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Button hover effect for default buttons */
+.buttons button:hover {
+  background-color: #444;
+}
+
+/* Special styling for operator buttons */
+.buttons button.operator {
+  background-color: #ff8c00; /* orange */
+  color: #fff;
+}
+
+/* Hover effect for operator buttons */
+.buttons button.operator:hover {
+  background-color: #ffa733;
+}
+
+/* Styling for the equal button, spanning 2 columns */
+.buttons button.equal {
+  background-color: #00c853; /* green */
+  color: white;
+  grid-column: span 2;
+}
+
+/* Hover effect for equal button */
+.buttons button.equal:hover {
+  background-color: #00e676;
+}
+
+/* Styling for the clear button */
+.buttons button.clear {
+  background-color: #d32f2f; /* red */
+  color: white;
+}
+
+/* Hover effect for clear button */
+.buttons button.clear:hover {
+  background-color: #f44336;
+}

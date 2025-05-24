@@ -1,0 +1,183 @@
+/* Reset default margin, padding, set box-sizing for all elements, and set base font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+/* Body styling with gradient background, full height, center content using flexbox */
+body {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Main container (#heroSection) styling:
+   - max width for layout control
+   - translucent background with blur effect
+   - padding and rounded corners for spacing and aesthetics
+   - flexbox column layout with spacing */
+#heroSection {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+/* Heading styling within heroSection */
+#heroSection h1 {
+  font-size: 38px;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 1.8px;
+  font-family: "Comic Relief", cursive;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5); /* subtle shadow for depth */
+}
+
+/* Container for input and button arranged in a row with spacing */
+#heroSection .box {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+}
+
+/* Text input styling:
+   - flexible width to fill remaining space
+   - height for usability
+   - padding inside input
+   - rounded corners and transparent background
+   - white text and placeholder styling
+   - smooth background color transition on focus */
+#heroSection .box input {
+  flex: 1;
+  height: 50px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.12);
+  outline: none;
+  transition: 0.3s ease;
+}
+
+/* Placeholder text color */
+#heroSection .box input::placeholder {
+  color: rgba(76, 74, 74, 0.6);
+}
+
+/* Change background color when input is focused */
+#heroSection .box input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Submit button styling:
+   - fixed width and height for consistency
+   - no border, rounded corners
+   - bold font, white text
+   - gradient background with smooth transitions
+   - pointer cursor on hover */
+#heroSection .box button {
+  width: 130px;
+  height: 50px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 12px;
+  background: linear-gradient(to right, #6a82fb, #a777e3);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Button hover effect: slightly scale up and change gradient */
+#heroSection .box button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #8360c3, #2ebf91);
+}
+
+/* Paragraph styling (if used inside heroSection):
+   - lighter text color
+   - medium font size
+   - letter spacing and center alignment */
+#heroSection p {
+  color: #eaeaea;
+  font-size: 18px;
+  letter-spacing: 0.6px;
+  text-align: center;
+}
+
+/* Container for task list and delete buttons */
+#heroSection #showAndDeleteTask {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Unordered list styling to remove bullets and set full width */
+#heroSection #showAndDeleteTask ul {
+  width: 100%;
+  list-style: none;
+}
+
+/* Each task item styling:
+   - padding and rounded corners for spacing and style
+   - semi-transparent background
+   - white text and readable font size
+   - flex container to align task text and delete button horizontally
+   - box shadow for depth
+   - margin bottom to separate tasks */
+#heroSection #showAndDeleteTask ul li {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 15px;
+}
+
+/* Slight scale and background brighten on hover for task item */
+#heroSection #showAndDeleteTask ul li:hover {
+  transform: scale(1.015);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Delete button styling inside task list:
+   - red background for emphasis
+   - white text, no border
+   - padding and rounded corners for clickability
+   - small font size for subtlety
+   - cursor pointer on hover */
+#heroSection #showAndDeleteTask ul button {
+  background-color: #ff4e4e;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Change delete button background on hover for feedback */
+#heroSection #showAndDeleteTask ul button:hover {
+  background-color: #ff6b6b;
+}

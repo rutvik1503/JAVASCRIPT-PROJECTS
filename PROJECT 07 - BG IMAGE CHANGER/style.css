@@ -1,0 +1,58 @@
+/* Reset default padding and margin for all elements and use border-box for sizing */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Set a dark gradient background for the entire page */
+body {
+  background: linear-gradient(135deg, #000000, #434343);
+}
+
+/* Main container styling */
+.main {
+  width: 100%; /* Full width */
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  gap: 50px; /* Space between flex items */
+  align-items: center; /* Center items vertically */
+  flex-direction: column; /* Stack items vertically */
+  padding: 75px; /* Internal spacing */
+  background-size: cover; /* Background image covers the container */
+  background-position: center; /* Center the background image */
+  transition: background-image 0.5s ease-in-out; /* Smooth transition when bg changes */
+}
+
+/* Styling for the div showing the background image */
+.main .image {
+  width: 80%; /* 80% width of the parent */
+  height: 90%; /* 90% height of the parent */
+  background-position: center; /* Center background image */
+  background-size: cover; /* Cover entire div area */
+  border-radius: 30px; /* Rounded corners */
+}
+
+/* Style for the button inside .main */
+.main button {
+  font-size: 16px; /* Text size */
+  border: none; /* Remove default border */
+  border-radius: 12px; /* Rounded corners */
+  background-color: rgba(0, 0, 0, 0); /* Transparent background */
+  backdrop-filter: blur(
+    px
+  ); /* Blur effect (missing value - should specify a pixel value) */
+  padding: 15px 25px; /* Padding inside the button */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  transition: all 0.3s ease; /* Smooth transition for all changes */
+  color: #fff; /* White text color */
+  font-weight: 600; /* Semi-bold text */
+}
+
+/* Button hover effects */
+.main button:hover {
+  transform: translateY(-5px); /* Slightly lift the button upwards */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow for emphasis */
+}

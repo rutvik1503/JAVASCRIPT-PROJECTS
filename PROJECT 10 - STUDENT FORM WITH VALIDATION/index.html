@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8" />
+
+    <!-- Responsive design for different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Student Details Form - Simple Dark</title>
+
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts: Comic Relief & Josefin Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- jQuery Validation plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+  </head>
+  <body>
+    <!-- Main container for the form, with ARIA role and label for accessibility -->
+    <div class="form-container" role="form" aria-labelledby="form-title">
+      <!-- Form title -->
+      <h2 id="form-title">Student Details Form</h2>
+
+      <!-- Student details form, novalidate disables native HTML validation -->
+      <form id="studentForm" novalidate>
+        <!-- Full Name input group -->
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            autocomplete="name"
+            aria-required="true"
+          />
+        </div>
+
+        <!-- Email Address input group -->
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            aria-required="true"
+          />
+        </div>
+
+        <!-- Contact Number input group -->
+        <div class="form-group">
+          <label for="contact">Contact No.</label>
+          <input
+            type="text"
+            id="contact"
+            name="contact"
+            placeholder="Enter your contact number"
+            inputmode="numeric"
+            autocomplete="tel"
+            aria-required="true"
+          />
+        </div>
+
+        <!-- Gender select dropdown -->
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" aria-required="true">
+            <!-- Default disabled placeholder option -->
+            <option value="" disabled selected>Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <!-- Course input group -->
+        <div class="form-group">
+          <label for="course">Course</label>
+          <input
+            type="text"
+            id="course"
+            name="course"
+            placeholder="E.g., B.Tech, B.Sc, etc."
+            autocomplete="off"
+            aria-required="true"
+          />
+        </div>
+
+        <!-- Submit button with ARIA label -->
+        <button type="submit" aria-label="Submit student details form">
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

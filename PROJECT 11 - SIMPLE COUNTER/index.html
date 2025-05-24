@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Ensure proper scaling and responsiveness on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Professional Dark Theme Counter</title>
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Main container for the counter with ARIA roles for accessibility -->
+    <main class="counter-container" role="main" aria-label="Dark theme counter">
+      <!-- Display area for the counter value -->
+      <div
+        class="counter-display"
+        id="counter"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        0
+      </div>
+
+      <!-- Group of buttons for counter control -->
+      <div class="button-group">
+        <!-- Button to decrement the counter value -->
+        <button aria-label="Decrement counter" onclick="decrement()">−</button>
+
+        <!-- Button to reset the counter to zero -->
+        <button
+          class="reset-btn"
+          aria-label="Reset counter"
+          onclick="resetCounter()"
+        >
+          Reset
+        </button>
+
+        <!-- Button to increment the counter value -->
+        <button aria-label="Increment counter" onclick="increment()">+</button>
+      </div>
+    </main>
+
+    <!-- Link to external JavaScript file to handle counter logic -->
+    <script src="script.js"></script>
+  </body>
+</html>
